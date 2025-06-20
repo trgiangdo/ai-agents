@@ -4,7 +4,7 @@ from typing import Optional
 from dotenv import load_dotenv
 from smolagents import ApiModel, AzureOpenAIServerModel, InferenceClientModel, OpenAIServerModel
 
-load_dotenv()
+load_dotenv(f"{os.path.dirname(__file__)}/.env")
 
 __required_env_vars = {
     "azure_openai": [
