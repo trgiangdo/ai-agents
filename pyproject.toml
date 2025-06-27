@@ -38,8 +38,13 @@ description = "A collection of AI agents for various tasks"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "authlib>=1.6.0",
+    "datasets>=3.6.0",
     "duckduckgo-search>=8.0.4",
     "gradio>=5.34.0",
+    "itsdangerous>=2.2.0",
+    "langchain>=0.3.26",
+    "langchain-community>=0.3.26",
     "langchain-core>=0.3.66",
     "langchain-openai>=0.3.24",
     "langgraph>=0.4.8",
@@ -47,6 +52,7 @@ dependencies = [
     "openai>=1.86.0",
     "pandas>=2.3.0",
     "python-dotenv>=1.1.0",
+    "rank-bm25>=0.2.2",
     "smolagents>=1.18.0",
 ]
 

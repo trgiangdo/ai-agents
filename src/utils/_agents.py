@@ -1,4 +1,4 @@
-from ..agents import alfred
+from ..agents import alfred, boss
 
 
 def get_agent(name: str):
@@ -7,6 +7,7 @@ def get_agent(name: str):
     """
     agents = {
         "alfred": alfred,
+        "boss": boss,
     }
 
     if name in agents:
