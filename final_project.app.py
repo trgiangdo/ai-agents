@@ -26,7 +26,7 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
     submit_url = f"{api_url}/submit"
 
     # 1. Instantiate Agent
-    agent = get_agent("boss")
+    agent = get_agent("gaia")
 
     # 2. Fetch Questions
     print(f"Fetching questions from: {questions_url}")
@@ -122,14 +122,6 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
 
 with gr.Blocks() as demo:
     gr.Markdown("# Agent Evaluation Runner")
-    gr.Markdown(
-        """
-        **Instructions:**
-        1.  Log in to your Hugging Face account using the button below. This uses your HF username for submission.
-        2.  Click 'Run Evaluation & Submit All Answers' to fetch questions, run your agent, submit answers, and see the score.
-        """
-    )
-
     gr.LoginButton()
 
     run_button = gr.Button("Run Evaluation & Submit All Answers")

@@ -1,2 +1,2 @@
 from .alfred import alfred
-from .boss import boss
+from .gaia import gaia_agent

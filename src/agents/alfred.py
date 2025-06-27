@@ -20,7 +20,7 @@ model = get_llm_model()
 # Import the image generation tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
-with open("src/prompts/prompts.yaml", "r") as stream:
+with open("src/prompts/alfred.prompts.yaml", "r") as stream:
     prompt_templates = yaml.safe_load(stream)
 
 alfred = CodeAgent(
