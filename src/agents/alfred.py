@@ -1,7 +1,14 @@
 import yaml
 from smolagents import CodeAgent, load_tool
 
-from ..tools import DuckDuckGoSearchTool, FinalAnswerTool, VisitWebpageTool, get_current_time_in_timezone, suggest_menu
+from ..tools import (
+    DuckDuckGoSearchTool,
+    FinalAnswerTool,
+    VisitWebpageTool,
+    get_current_time_in_timezone,
+    guest_info_tool,
+    suggest_menu,
+)
 from ..utils._llm_provider import get_llm_model
 
 get_final_answer = FinalAnswerTool()
@@ -19,7 +26,13 @@ with open("src/prompts/prompts.yaml", "r") as stream:
 alfred = CodeAgent(
     model=model,
     tools=[
-        get_current_time_in_timezone, get_final_answer, search_web, visit_webpage, image_generation_tool, suggest_menu
+        get_current_time_in_timezone,
+        get_final_answer,
+        search_web,
+        visit_webpage,
+        image_generation_tool,
+        suggest_menu,
+        guest_info_tool,
     ],
     max_steps=6,
     verbosity_level=1,
