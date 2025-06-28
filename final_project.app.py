@@ -61,7 +61,6 @@ def run_and_submit_all(profile: gr.OAuthProfile | None):
             continue
         try:
             submitted_answer = agent.run(question_text)
-            submitted_answer = submitted_answer.to_string()
             answers_payload.append({"task_id": task_id, "submitted_answer": submitted_answer})
             results_log.append({"Task ID": task_id, "Question": question_text, "Submitted Answer": submitted_answer})
         except Exception as e:
